@@ -1,4 +1,5 @@
 Source idea:https://medium.com/@gabehollombe/build-your-own-multi-user-photo-album-app-with-react-graphql-and-aws-amplify-18d9cfe27f60
+AWS workshop: https://amplify-workshop.go-aws.com
 AWS Amplify issue in windows: https://github.com/aws-amplify/amplify-cli/issues/13#issuecomment-465667179
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -67,5 +68,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
 ### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

@@ -1,6 +1,7 @@
-Source idea:https://medium.com/@gabehollombe/build-your-own-multi-user-photo-album-app-with-react-graphql-and-aws-amplify-18d9cfe27f60
-AWS workshop: https://amplify-workshop.go-aws.com
-AWS Amplify issue in windows: https://github.com/aws-amplify/amplify-cli/issues/13#issuecomment-465667179
+Source idea:https://medium.com/@gabehollombe/build-your-own-multi-user-photo-album-app-with-react-graphql-and-aws-amplify-18d9cfe27f60<br />
+AWS workshop: https://amplify-workshop.go-aws.com<br />
+AWS Amplify issue in windows: https://github.com/aws-amplify/amplify-cli/issues/13#issuecomment-465667179<br />
+https://aws.amazon.com/pt/developers/getting-started/nodejs/<br />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -14,7 +14,7 @@ import * as mutations from './graphql/mutations'
 import * as subscriptions from './graphql/subscriptions'
 
 Amplify.configure(aws_exports);
-
+// Added makeComparator to allow us to sanely sort strings in JS
 function makeComparator(key, order = 'asc') {
   return (a, b) => {
     if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) 

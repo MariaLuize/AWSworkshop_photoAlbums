@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap"
 
 import Amplify, {Auth} from 'aws-amplify'
 import API, {graphqlOperation} from '@aws-amplify/api'
@@ -42,19 +43,22 @@ function makeComparator(key, order = 'asc') {
 const NewAlbum = () => {
   const [name,
     setName] = useState('')
-
+  const [year,
+    setYear] = useState('')
+    
   const handleSubmit = async(event) => {
     event.preventDefault();
     await API.graphql(graphqlOperation(mutations.createAlbum, {input: {
-        name
+        name,year
       }}))
     setName('')
+    setYear('')
   }
 
   return (
     <Segment>
       <Header as='h3'>Add a new album</Header>
-      <Input
+      {/* <Input
         type='text'
         placeholder='New Album Name'
         icon='plus'
@@ -65,7 +69,40 @@ const NewAlbum = () => {
       }}
         name='name'
         value={name}
-        onChange={(e) => setName(e.target.value)}/>
+        onChange={(e) => setName(e.target.value)}/> */}
+
+      <Form useRef ="form" >
+      
+        <Input
+          type='text'
+          placeholder='New Album Name'
+          icon='plus'
+          iconPosition='left'
+          // action={{
+          //   content: 'Create',
+          //   onClick: handleSubmit
+          // }}
+          name='name'
+          value={name}
+          onChange={(e) => setName(e.target.value)}/>
+
+        <Input
+          type='text'
+          placeholder='Year'
+          // icon='plus'
+          iconPosition='right'
+          // action={{
+          //   content: 'Create',
+          //   onClick: handleSubmit
+          // }}
+          name='year'
+          value={year}
+          onChange={(e) => setYear(e.target.value)}/>
+        
+        <button type="submit" onClick={handleSubmit}>Create</button>
+        
+
+      </Form>
     </Segment>
   )
 }
@@ -118,7 +155,7 @@ const AlbumsList = () => {
 
 const AlbumDetails = (props) => {
   const [album,
-    setAlbum] = useState({name: 'Loading...', photos: []})
+    setAlbum] = useState({name: 'Loading...',year: 'Loading...', photos: []})
 
   useEffect(() => {
     const loadAlbumInfo = async() => {
@@ -131,7 +168,7 @@ const AlbumDetails = (props) => {
 
   return (
     <Segment>
-      <Header as='h3'>{album.name}</Header>
+      <Header as='h3'>{album.name} {album.year}</Header>
       <p>TODO LATER IN WORKSHOP: Allow photo uploads</p>
       <p>TODO LATER IN WORKSHOP: Show photos for this album</p>
     </Segment>

@@ -3,6 +3,7 @@ type Album
 @auth(rules: [{allow: owner}]) {
     id: ID!
     name: String!
+    year: String
     photos: [Photo] @connection(keyName: "byAlbum", fields: ["id"])
 }
 

@@ -6,6 +6,7 @@ export const onCreateAlbum = /* GraphQL */ `
     onCreateAlbum(owner: $owner) {
       id
       name
+      year
       photos {
         items {
           id
@@ -28,6 +29,7 @@ export const onUpdateAlbum = /* GraphQL */ `
     onUpdateAlbum(owner: $owner) {
       id
       name
+      year
       photos {
         items {
           id
@@ -50,6 +52,7 @@ export const onDeleteAlbum = /* GraphQL */ `
     onDeleteAlbum(owner: $owner) {
       id
       name
+      year
       photos {
         items {
           id
@@ -75,6 +78,7 @@ export const onCreatePhoto = /* GraphQL */ `
       album {
         id
         name
+        year
         photos {
           nextToken
         }
@@ -107,6 +111,7 @@ export const onUpdatePhoto = /* GraphQL */ `
       album {
         id
         name
+        year
         photos {
           nextToken
         }
@@ -139,6 +144,7 @@ export const onDeletePhoto = /* GraphQL */ `
       album {
         id
         name
+        year
         photos {
           nextToken
         }

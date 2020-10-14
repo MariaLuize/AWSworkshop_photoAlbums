@@ -6,6 +6,7 @@ export const getAlbum = /* GraphQL */ `
     getAlbum(id: $id) {
       id
       name
+      year
       photos {
         items {
           id
@@ -33,6 +34,7 @@ export const listAlbums = /* GraphQL */ `
       items {
         id
         name
+        year
         photos {
           nextToken
         }
@@ -52,6 +54,7 @@ export const getPhoto = /* GraphQL */ `
       album {
         id
         name
+        year
         photos {
           nextToken
         }
@@ -89,6 +92,7 @@ export const listPhotos = /* GraphQL */ `
         album {
           id
           name
+          year
           createdAt
           updatedAt
           owner
@@ -133,6 +137,7 @@ export const listPhotosByAlbum = /* GraphQL */ `
         album {
           id
           name
+          year
           createdAt
           updatedAt
           owner

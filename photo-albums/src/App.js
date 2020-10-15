@@ -57,19 +57,7 @@ const NewAlbum = () => {
 
   return (
     <Segment>
-      <Header as='h3'>Add a new album</Header>
-      {/* <Input
-        type='text'
-        placeholder='New Album Name'
-        icon='plus'
-        iconPosition='left'
-        action={{
-        content: 'Create',
-        onClick: handleSubmit
-      }}
-        name='name'
-        value={name}
-        onChange={(e) => setName(e.target.value)}/> */}
+      <Header as='h3'>Add a new album </Header>
 
       <Form useRef ="form" >
       
@@ -78,10 +66,6 @@ const NewAlbum = () => {
           placeholder='New Album Name'
           icon='plus'
           iconPosition='left'
-          // action={{
-          //   content: 'Create',
-          //   onClick: handleSubmit
-          // }}
           name='name'
           value={name}
           onChange={(e) => setName(e.target.value)}/>
@@ -91,10 +75,6 @@ const NewAlbum = () => {
           placeholder='Year'
           // icon='plus'
           iconPosition='right'
-          // action={{
-          //   content: 'Create',
-          //   onClick: handleSubmit
-          // }}
           name='year'
           value={year}
           onChange={(e) => setYear(e.target.value)}/>
